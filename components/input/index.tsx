@@ -14,7 +14,7 @@ export function CustomInput({
   placeholder,
 }: CustomInputProps) {
   return (
-    <div className="form-group">
+    <div className='form-group'>
       <label htmlFor={id}>{labeltext}</label>
       <br />
       <input
