@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="/assets/imge/trainee-mart-logo.svg">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-2 d-flex flex-column nav-bar" id="navBar">
+
+                <!-- Profile -->
+                <a href="/my-profile.html" class="side-menu-link">
+                    <div class="side-menu-item">
+                        <div class="side-menu-profile ">
+                            <img src="/assets/imge/avatar_holder_dashboard.gif" alt="user">
+                        </div>
+                        <div class="side-menu-title profile-name">
+                            karim ashraf
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Menu Items -->
+                <div class="menu-container d-flex flex-column ">
+
+                    <a href="/index.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div class="side-menu-title">Dashboard</div>
+                        </div>
+                    </a>
+
+                    <a href="/admins.html?page=1" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon ">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <div class="side-menu-title">Admins</div>
+                        </div>
+                    </a>
+
+                    <a href="/trainees.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon ">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="side-menu-title">Trainees</div>
+                        </div>
+                    </a>
+
+                    <a href="/organizations.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon ">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                            <div class="side-menu-title">Organizations</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-square-caret-up"></i>
+                            </div>
+                            <div class="side-menu-title">Update Requests</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div class="side-menu-title">Categories</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-diagram-next"></i>
+                            </div>
+                            <div class="side-menu-title">Sub categories</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-regular fa-lightbulb"></i>
+                            </div>
+                            <div class="side-menu-title">Courses</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="side-menu-title">Bags</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                            <div class="side-menu-title">Consultation Requests</div>
+                        </div>
+                    </a>
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-newspaper"></i>
+                            </div>
+                            <div class="side-menu-title">Pages</div>
+                        </div>
+                    </a>
+
+                </div>
+                <a href="#" id="logoutBtn" class="side-menu-link">
+                    <div class="side-menu-item logout-item">
+                        <div class="side-menu-icon logout-icon">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                        <div class="side-menu-title logout-title">
+                            Logout
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+
+
+            <div class="col-10 " id="home">
+                <div class="row">
+                    <div class="col-12 hyder">
+                        <div class="navbarcontrolicon">
+                            <i class="fa-solid fa-minus" id="closing"></i>
+                        </div>
+                        <div class="navbarcontrolicon">
+                            <i class="fa-solid fa-x" id="open"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- changed: admins-header -> trainees-header -->
+                <div class="row trainees-header">
+                    <!-- changed: admins-title -> trainees-title -->
+                    <div class="col-6 trainees-title">
+                        Trainees List
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-end">
+                        <button class="add-new-btn" id="addNewBtn">Add new</button>
+                    </div>
+                </div>
+
+                <div class="row search-box">
+                    <div class="col-6">
+                        <div class="search-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" class="search-input" placeholder="Search here...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 tibol-scroll">
+                        <!-- changed: admins-table -> trainees-table -->
+                        <table class="trainees-table">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Phone number</th>
+                                    <th>Created at</th>
+                                    <th>Created by</th>
+                                    <th>Updated at</th>
+                                    <th>Updated by</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <!-- changed: adminsTableBody -> traineesTableBody -->
+                            <tbody id="traineesTableBody"></tbody>
+
+                        </table>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <div id="pagination" class="btn-group"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

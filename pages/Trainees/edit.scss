@@ -1,0 +1,206 @@
+.add-trainee {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "NotoKufiArabic";
+    color: #4a4a4a;
+    font-size: 24px;
+}
+
+.add-form {
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#avatarPreview {
+    cursor: pointer;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 45px;
+}
+
+/* ================= FIRST NAME ================= */
+.firstName-label {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "NotoKufiArabic";
+    color: #2c2c2c;
+}
+
+.firstName-input {
+    font-size: 16px;
+    font-family: "NotoKufiArabic";
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    padding-left: 14px;
+}
+
+.firstName-input:focus {
+    border-color: #2468f2;
+    box-shadow: 0 0 0 3px rgba(36, 104, 242, 0.18);
+}
+
+.firstName-input::placeholder {
+    font-family: "NotoKufiArabic";
+    color: #9b9b9b;
+    font-size: 15px;
+}
+
+/* ================= LAST NAME ================= */
+.lastName-label {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "NotoKufiArabic";
+    color: #2c2c2c;
+}
+
+.lastName-input {
+    font-size: 16px;
+    font-family: "NotoKufiArabic";
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    padding-left: 14px;
+}
+
+.lastName-input:focus {
+    border-color: #2468f2;
+    box-shadow: 0 0 0 3px rgba(36, 104, 242, 0.18);
+}
+
+.lastName-input::placeholder {
+    font-family: "NotoKufiArabic";
+    color: #9b9b9b;
+    font-size: 15px;
+}
+
+/* ================= EMAIL ================= */
+.email-label {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "NotoKufiArabic";
+    color: #2c2c2c;
+}
+
+.email-input {
+    font-size: 16px;
+    font-family: "NotoKufiArabic";
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    padding-left: 14px;
+}
+
+.email-input:focus {
+    border-color: #2468f2;
+    box-shadow: 0 0 0 3px rgba(36, 104, 242, 0.18);
+}
+
+.email-input::placeholder {
+    font-family: "NotoKufiArabic";
+    color: #9b9b9b;
+    font-size: 15px;
+}
+
+/* ================= PHONE ================= */
+.phone-label {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "NotoKufiArabic";
+    color: #2c2c2c;
+}
+
+/* ================= INPUT ================= */
+.phone-input {
+    font-size: 16px;
+    font-family: "NotoKufiArabic";
+    border: 1px solid #c9c9c9;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    padding-left: 14px;
+    box-sizing: border-box;
+}
+
+.phone-input:focus {
+    border-color: #2468f2;
+    box-shadow: 0 0 0 3px rgba(36, 104, 242, 0.18);
+}
+
+.phone-input::placeholder {
+    font-family: "NotoKufiArabic";
+    color: #9b9b9b;
+    font-size: 15px;
+}
+
+/* ================= SELECT ================= */
+.country-select {
+    font-family: "NotoKufiArabic";
+    font-size: 16px;
+    width: 80px;
+    border: 1px solid #c9c9c9;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.country-select:focus {
+    border-color: #2468f2;
+    box-shadow: 0 0 0 3px rgba(36, 104, 242, 0.18);
+}
+
+/* ================= HOVER ================= */
+.phone-box:hover .phone-input {
+    border-color: #2468f2 !important;
+    box-shadow: 3px 0 6px rgba(36, 104, 242, 0.18);
+}
+
+.phone-box:hover .country-select {
+    border-color: #2468f2 !important;
+    box-shadow: -3px 0 6px rgba(36, 104, 242, 0.18);
+}
+
+.phone-box:focus-within .phone-input {
+    border-color: #2468f2 !important;
+    box-shadow: 3px 0 6px rgba(36, 104, 242, 0.18);
+}
+
+.phone-box:focus-within .country-select {
+    border-color: #2468f2 !important;
+    box-shadow: -3px 0 6px rgba(36, 104, 242, 0.18);
+}
+
+/* ================= Phone Error ================= */
+.phone-box.phone-error .phone-input {
+    border-color: #eb0b0b !important;
+    box-shadow: 3px 0 6px rgba(225, 6, 17, 0.5);
+}
+
+.phone-box.phone-error .country-select {
+    border-color: #eb0b0b !important;
+    box-shadow: -3px 0 6px rgba(225, 6, 17, 0.5);
+}
+
+/* (اختياري) لو عندك permissions في صفحات تانية */
+.perm-check {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.perm-input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.perm-label {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 495;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

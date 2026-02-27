@@ -1,0 +1,19 @@
+.welcome-box {
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.welcome-title {
+    font-size: 100px;
+    font-weight: 800;
+    color: #142D4C; 
+    animation: fadeSlide 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 0.4; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}

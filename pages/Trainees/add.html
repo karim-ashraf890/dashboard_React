@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="/assets/imge/trainee-mart-logo.svg">
+    <title>Add Trainee</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- ===== Side Menu ===== -->
+            <div class="col-2 d-flex flex-column nav-bar" id="navBar">
+
+                <!-- Profile -->
+                <a href="/my-profile.html" class="side-menu-link">
+                    <div class="side-menu-item">
+                        <div class="side-menu-profile ">
+                            <img src="/assets/imge/avatar_holder_dashboard.gif" alt="user">
+                        </div>
+                        <div class="side-menu-title profile-name">
+                            karim ashraf
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Menu Items -->
+                <div class="menu-container d-flex flex-column ">
+
+                    <a href="/index.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div class="side-menu-title">Dashboard</div>
+                        </div>
+                    </a>
+
+                    <a href="/admins.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon ">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <div class="side-menu-title">Admins</div>
+                        </div>
+                    </a>
+
+                    <a href="/trainees.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon ">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="side-menu-title">Trainees</div>
+                        </div>
+                    </a>
+
+                    <a href="/organizations.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon ">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                            <div class="side-menu-title">Organizations</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-square-caret-up"></i>
+                            </div>
+                            <div class="side-menu-title">Update Requests</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div class="side-menu-title">Categories</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-diagram-next"></i>
+                            </div>
+                            <div class="side-menu-title">Sub categories</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-regular fa-lightbulb"></i>
+                            </div>
+                            <div class="side-menu-title">Courses</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="side-menu-title">Bags</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                            <div class="side-menu-title">Consultation Requests</div>
+                        </div>
+                    </a>
+
+                    <a href="/dashboard.html" class="side-menu-link">
+                        <div class="side-menu-item">
+                            <div class="side-menu-icon">
+                                <i class="fa-solid fa-newspaper"></i>
+                            </div>
+                            <div class="side-menu-title">Pages</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <a href="#" id="logoutBtn" class="side-menu-link">
+                    <div class="side-menu-item logout-item">
+                        <div class="side-menu-icon logout-icon">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                        <div class="side-menu-title logout-title">
+                            Logout
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- ===== Page Content ===== -->
+            <div class="col-10" id="home">
+
+                <div class="row">
+                    <div class="col-12 hyder">
+                        <div class="navbarcontrolicon">
+                            <i class="fa-solid fa-minus" id="closing"></i>
+                        </div>
+                        <div class="navbarcontrolicon">
+                            <i class="fa-solid fa-x" id="open"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="add-admin">Add trainee</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="add-form">
+
+                                    <div class="avatar-box text-center">
+                                        <img src="../../assets/imge/avatar_holder_dashboard.gif" alt="profile"
+                                            id="avatarPreview">
+                                        <input type="file" id="avatarInput" hidden accept="image/*">
+                                    </div>
+
+                                    <div class="row p-4">
+                                        <div class="col-6">
+                                            <label class="firstName-label">First name</label>
+                                            <input type="text" class="form-control firstName-input" id="firstName"
+                                                placeholder="First name">
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="lastName-label">Last name</label>
+                                            <input type="text" class="form-control lastName-input" id="lastName"
+                                                placeholder="Last name">
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-4">
+                                        <div class="col-6 mb-3">
+                                            <label class="email-label">Email</label>
+                                            <input type="email" class="form-control email-input" id="email"
+                                                placeholder="Enter email">
+                                        </div>
+
+                                        <div class="col-6 mb-3">
+                                            <label class="phone-label">Phone number</label>
+                                            <div class="d-flex phone-box">
+                                                <select class="form-control country-select" id="countryCode">
+                                                    <option value="" disabled selected>Country</option>
+                                                    <option value="20">EG</option>
+                                                    <option value="966">SA</option>
+                                                </select>
+                                                <input type="text" class="form-control phone-input" id="phone"
+                                                    placeholder="Phone number">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-4">
+                                        <div class="col-6">
+                                            <label class="firstName-label">Password</label>
+                                            <input type="password" class="form-control firstName-input" id="Password"
+                                                placeholder="Password">
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="lastName-label">Confirm password</label>
+                                            <input type="password" class="form-control lastName-input"
+                                                id="ConfirmPassword" placeholder="Confirm password">
+                                        </div>
+                                    </div>
+
+                                    <button id="submit-btn">Submit</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
