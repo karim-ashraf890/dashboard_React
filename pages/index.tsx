@@ -1,14 +1,17 @@
 import './home.scss';
 import './common/sideMenu.scss';
 import { Link } from '../components/link';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ProfileLink from '../components/profileLink';
 import SideMenu from '../components/sideMenu';
 import NavBar from '../components/navBar';
 import { refreshTokenFun } from '../api/api';
 import { isEmail, removeError, showError } from '../helpers/helper';
+import { AppContext } from '../store';
 
 export function HomePage() {
+  const { state, dispatch } = useContext(AppContext);
+
   useEffect(() => {
     let token = localStorage.getItem('accessToken');
     if (!token) {
@@ -23,7 +26,7 @@ export function HomePage() {
     <div className='container-fluid'>
       <div className='row'>
         <SideMenu />
-        <div className='col-10' id='home'>
+        <div className={state.sideMenuToggle ? 'col-10' : 'col-11'} id='home'>
           <NavBar />
           <div className='row welcome-box'>
             <div className='col-12 text-center'>

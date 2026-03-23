@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-
+import '../../global.scss';
 type CustomInputProps = {
   type: string;
   className?: string;
   labeltext?: string;
   id: string;
   placeholder: string;
+  value: string;
+  onChange: (e: any) => void;
+  error?: string[];
 };
 
 export function CustomInput({
@@ -14,6 +17,9 @@ export function CustomInput({
   labeltext,
   id,
   placeholder,
+  value,
+  onChange,
+  error,
 }: CustomInputProps) {
   // const inputRef = useRef(null);
   // const [val, setVal] = useState(9);
@@ -35,12 +41,21 @@ export function CustomInput({
         return <div>{value}</div>;
       })} */}
       <input
-        className={className}
+        className={`${className} ${error?.length ? 'inputerror' : ''}`}
         type={type}
         id={id}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         // onClick={() => setVal(20)}
       />
+      {error && error.length > 0 && (
+        <div className='messageerror'>
+          {error.map((msg, index) => (
+            <div key={index}>{msg}</div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
