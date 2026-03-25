@@ -1,6 +1,6 @@
 import CustomButton from '../../components/button/indx';
 import { CustomInput } from '../../components/input';
-import Style from './login.scss';
+import './login.scss';
 import { useState } from 'react';
 import { isEmail } from '../../helpers/helper';
 import axios from 'axios';
@@ -79,7 +79,7 @@ export default function LoginPage() {
     <div className='container-fluid'>
       <div className='row'>
         <div className='offset-4 col-4'>
-          <div className={Style['loginbox']}>
+          <div className={'loginbox'}>
             <div className='row'>
               <div className='col-12 d-flex justify-content-center'>
                 <div className='Signin'>
