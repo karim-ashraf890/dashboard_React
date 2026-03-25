@@ -22,15 +22,19 @@ export function HomePage() {
 
     const apiUrl = 'http://localhost:9696';
   }, []);
+
   return (
     <div className='container-fluid'>
       <div className='row'>
         <SideMenu />
+
         <div className={state.sideMenuToggle ? 'col-10' : 'col-11'} id='home'>
           <NavBar />
-          <div className='row welcome-box'>
+
+          {/* ⭐ هنا التعديل */}
+          <div className={`row ${homeStyles['welcome-box']}`}>
             <div className='col-12 text-center'>
-              <h1 className='welcome-title'>Welcome</h1>
+              <h1 className={homeStyles['welcome-title']}>Welcome</h1>
             </div>
           </div>
         </div>
