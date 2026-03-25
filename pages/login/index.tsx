@@ -16,7 +16,6 @@ export default function LoginPage() {
     password: [] as string[],
   });
 
-  // ✅ validation email
   function handleEmail(value: string) {
     let arr: string[] = [];
 
@@ -50,7 +49,6 @@ export default function LoginPage() {
     email !== '' &&
     password !== '';
 
-  // ✅ login api
   function logInUser() {
     setApiError('');
 
@@ -74,25 +72,24 @@ export default function LoginPage() {
   }
 
   return (
-    <div className={`container-fluid  ${loginStyles['login-container']}`}>
+    <div className={`container-fluid ${loginStyles['login-container']}`}>
       <div className='row'>
         <div className='offset-4 col-4'>
-          <div className={'loginbox'}>
+          <div className={loginStyles['loginbox']}>
             <div className='row'>
               <div className='col-12 d-flex justify-content-center'>
-                <div className='Signin'>
-                  <span className='highlight'>Si</span>gn in
+                <div className={loginStyles['Signin']}>
+                  <span className={loginStyles['highlight']}>Si</span>gn in
                 </div>
               </div>
             </div>
-            {/* ✅ API ERROR */}
+
             <div className='row'>
               <div className='col-12 d-flex justify-content-center'>
                 {apiError && <div className='error-message'>{apiError}</div>}
               </div>
             </div>
 
-            {/* ✅ Email */}
             <div className='row mb-4'>
               <div className='col-12'>
                 <CustomInput
@@ -100,7 +97,7 @@ export default function LoginPage() {
                   type={'text'}
                   id={'signIn'}
                   placeholder={'Example@mail.com'}
-                  className={'inputsignin'}
+                  className={loginStyles['inputsignin']}
                   value={email}
                   onChange={(e) => handleEmail(e.target.value)}
                   error={errors.email}
@@ -108,7 +105,6 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* ✅ Password */}
             <div className='row mb-4'>
               <div className='col-12'>
                 <CustomInput
@@ -116,7 +112,7 @@ export default function LoginPage() {
                   type={'password'}
                   id={'Password'}
                   placeholder={'Enter your password'}
-                  className={'inputsignin'}
+                  className={loginStyles['inputsignin']}
                   value={password}
                   onChange={(e) => handlePassword(e.target.value)}
                   error={errors.password}
@@ -124,11 +120,10 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* ✅ Button */}
             <div className='row'>
               <div className='col-12'>
                 <CustomButton
-                  className={'buttonsignin'}
+                  className={loginStyles['buttonsignin']}
                   id={'login'}
                   buttontext={'Login'}
                   onClick={logInUser}

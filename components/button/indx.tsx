@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import loginStyles from './button.module.scss';
 
 type CustomButtonprops = {
   className: string;

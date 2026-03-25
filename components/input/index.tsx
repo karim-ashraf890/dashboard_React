@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../../global.scss';
+import loginStyles from './input.module.scss';
+
 type CustomInputProps = {
   type: string;
   className?: string;
