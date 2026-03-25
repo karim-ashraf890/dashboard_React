@@ -1,30 +1,33 @@
-@import "~bootstrap";
+@import '~bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
-
 .inputerror {
-    border: 1px solid #eb0b0b !important;
+  border: 1px solid #eb0b0b !important;
 }
 
 .inputerror:focus-visible {
-    border: 1px solid rgb(214, 10, 10) !important;
-    box-shadow: 0 0 8px rgba(225, 6, 17, 0.7) !important;
-    transition: box-shadow 0.3s, border-color 0.3s !important;
+  border: 1px solid rgb(214, 10, 10) !important;
+  box-shadow: 0 0 8px rgba(225, 6, 17, 0.7) !important;
+  transition: box-shadow 0.3s, border-color 0.3s !important;
 }
 
 .messageerror {
-    font-size: 16px;
-    font-family: "NotoKufiArabic";
-    text-align: center;
-    color: #eb0b0b;
+  font-size: 16px;
+  font-family: 'NotoKufiArabic';
+  text-align: center;
+  color: #eb0b0b;
 }
 
 .error-message {
-    background-color: red;
-    border-radius: 10px;
-    padding: 3px 10px;
-    color: white;
-    font-size: 20px;
-    font-family: "NotoKufiArabic";
-    text-align: center;
+  background-color: red;
+  border-radius: 10px;
+  padding: 3px 10px;
+  color: white;
+  font-size: 20px;
+  font-family: 'NotoKufiArabic';
+  text-align: center;
+}
+
+label {
+  font-family: 'NotoKufiArabic';
 }

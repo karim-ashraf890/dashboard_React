@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 type CustomButtonprops = {
   className: string;
   id: string;
@@ -13,6 +15,8 @@ export default function CustomButton({
   onClick,
   disabled,
 }: CustomButtonprops) {
+  useEffect(() => {}, []);
+
   return (
     <button className={className} id={id} onClick={onClick} disabled={disabled}>
       {buttontext}

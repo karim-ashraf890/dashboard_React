@@ -1,6 +1,6 @@
 import CustomButton from '../../components/button/indx';
 import { CustomInput } from '../../components/input';
-import './login.scss';
+import loginStyles from './login.module.scss';
 import { useState } from 'react';
 import { isEmail } from '../../helpers/helper';
 import axios from 'axios';
@@ -30,7 +30,6 @@ export default function LoginPage() {
     setEmail(value);
   }
 
-  // ✅ validation password
   function handlePassword(value: string) {
     let arr: string[] = [];
 
@@ -45,7 +44,6 @@ export default function LoginPage() {
     setPassword(value);
   }
 
-  // ✅ زرار يتقفل ويفتح
   const isValid =
     errors.email.length === 0 &&
     errors.password.length === 0 &&
@@ -76,7 +74,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className='container-fluid'>
+    <div className={`container-fluid  ${loginStyles['login-container']}`}>
       <div className='row'>
         <div className='offset-4 col-4'>
           <div className={'loginbox'}>
@@ -87,7 +85,6 @@ export default function LoginPage() {
                 </div>
               </div>
             </div>
-
             {/* ✅ API ERROR */}
             <div className='row'>
               <div className='col-12 d-flex justify-content-center'>

@@ -8,18 +8,63 @@ module.exports = {
 
     module: {
         rules: [
-            { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
-            { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
 
+            // ✅ SCSS MODULES
+            {
+                test: /\.module\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            esModule: false,
+                            modules: {
+                                localIdentName: '[name]__[local]__[hash:base64:5]',
+                                exportLocalsConvention: 'as-is', // ⭐ keep kebab-case names
+                            },
+                        },
+                    },
+                    'sass-loader',
+                ],
+            },
+
+            // ✅ GLOBAL SCSS
+            {
+                test: /\.s[ac]ss$/i,
+                exclude: /\.module\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            esModule: false,
+                        },
+                    },
+                    'sass-loader',
+                ],
+            },
+
+            // images
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
-                generator: { filename: 'images/[hash][ext][query]' },
+                generator: {
+                    filename: 'images/[hash][ext][query]',
+                },
             },
+
+            // fonts
             {
                 test: /\.(woff2?|eot|ttf|otf)$/i,
                 type: 'asset/resource',
-                generator: { filename: 'fonts/[hash][ext][query]' },
+                generator: {
+                    filename: 'fonts/[hash][ext][query]',
+                },
             },
         ],
     },
@@ -33,7 +78,9 @@ module.exports = {
         }),
     ],
 
-    resolve: { extensions: ['.tsx', '.ts', '.js'] },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
 
     output: {
         filename: 'main.js',
@@ -43,9 +90,17 @@ module.exports = {
     },
 
     devServer: {
-        static: { directory: path.join(__dirname, 'dist') },
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
         port: 9090,
         historyApiFallback: true,
-        client: { logging: 'none', overlay: { warnings: false, errors: true } },
+        client: {
+            logging: 'none',
+            overlay: {
+                warnings: false,
+                errors: true,
+            },
+        },
     },
 };

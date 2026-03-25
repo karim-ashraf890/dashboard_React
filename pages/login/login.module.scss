@@ -1,0 +1,61 @@
+.login-container {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #2a271e, #111122) no-repeat;
+  background-size: cover;
+}
+.loginbox {
+  width: 90%;
+  height: 370px;
+  margin-top: 33%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: column;
+}
+.Signin {
+  font-size: 32px;
+  font-family: 'NotoKufiArabic';
+  margin-bottom: 10px;
+  text-align: center;
+}
+.highlight {
+  border-bottom: 4px solid #0adfba;
+  padding-bottom: 2px;
+}
+.form-group {
+  text-align: center;
+}
+
+.inputsignin {
+  width: 75%;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.inputsignin:focus-visible {
+  outline: none;
+  border: 1px solid rgb(125, 167, 227);
+  box-shadow: 0 0 8px rgba(125, 167, 227, 0.7);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.buttonsignin {
+  font-family: 'NotoKufiArabic';
+  width: 75%;
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+}
+.buttonsignin:hover {
+  background-color: rgb(199, 199, 199);
+}

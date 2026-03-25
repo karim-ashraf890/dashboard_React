@@ -1,4 +1,4 @@
-import './home.scss';
+import homeStyles from './home.module.scss';
 import './common/sideMenu.scss';
 import { Link } from '../components/link';
 import { useContext, useEffect, useState } from 'react';

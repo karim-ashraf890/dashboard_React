@@ -1,10 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-
-type State = {
-  sideMenuToggle: boolean;
-};
-
-type Action = { type: 'UPDATE_SIDEMENU_TOGGLE'; payload: boolean };
+import { Action, State } from '../types/storeTypes';
 
 const initialState: State = {
   sideMenuToggle: true,
